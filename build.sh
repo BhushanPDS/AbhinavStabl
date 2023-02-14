@@ -3,6 +3,6 @@
 set -o errexit
 
 
-docker-compose -f dc-local.yml build
-
-docker-compose -f dc-local.yml up
+pip install -r requirements.txt
+python manage.py collectstatic --no-input
+python manage.py migrate
