@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "e0ca5b0f-7cf3-4391-a2ef-6174661d360f",
+		"name": "Stabl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15098753"
+	},
+	"item": [
+		{
+			"name": "Clinical Summary",
+			"item": [
+				{
+					"name": "Patient Query",
+					"item": [
+						{
+							"name": "Patient Query Demographics",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"Meta\": {\n      \"DataModel\": \"Clinical Summary\",\n      \"EventType\": \"PatientQuery\",\n      \"EventDateTime\": \"2022-08-16T14:21:20.733Z\",\n      \"Test\": false,\n      \"Source\": \n         {\n            \"ID\": \"5af5ebe8-4224-41d5-be7a-f3df671b57e5\",\n            \"Name\": \"CustomerID\"\n         },\n      \"FacilityCode\": null\n   },\n   \"Patient\": {\n      \"Identifiers\": [\n         {\n            \"ID\": \"enh2Q1c0oNRtWzXArnG4tKw3\",\n            \"IDType\": \"EHRID\"\n         }\n      ]\n   },\n   \"Location\": {\n      \"Department\": null\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/clinical-summary/patient-query/demographics",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"clinical-summary",
+										"patient-query",
+										"demographics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Query Insurance",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"Meta\": {\n      \"DataModel\": \"Clinical Summary\",\n      \"EventType\": \"PatientQuery\",\n      \"EventDateTime\": \"2022-08-16T14:21:20.733Z\",\n      \"Test\": false,\n      \"Source\": \n         {\n            \"ID\": \"5af5ebe8-4224-41d5-be7a-f3df671b57e5\",\n            \"Name\": \"CustomerID\"\n         },\n      \"FacilityCode\": null\n   },\n   \"Patient\": {\n      \"Identifiers\": [\n         {\n            \"ID\": \"e63wRTbPfr1p8UW81d8Seiw3\",\n            \"IDType\": \"EHRID\"\n         }\n      ]\n   },\n   \"Location\": {\n      \"Department\": null\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/clinical-summary/patient-query/insurances",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"clinical-summary",
+										"patient-query",
+										"insurances"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Query Medications",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"Meta\": {\n      \"DataModel\": \"Clinical Summary\",\n      \"EventType\": \"PatientQuery\",\n      \"EventDateTime\": \"2022-08-16T14:21:20.733Z\",\n      \"Test\": false,\n      \"Source\": \n         {\n            \"ID\": \"5af5ebe8-4224-41d5-be7a-f3df671b57e5\",\n            \"Name\": \"CustomerID\"\n         },\n      \"FacilityCode\": null\n   },\n   \"Patient\": {\n      \"Identifiers\": [\n         {\n            \"ID\": \"enh2Q1c0oNRtWzXArnG4tKw3\",\n            \"IDType\": \"EHRID\"\n         }\n      ]\n   },\n   \"Location\": {\n      \"Department\": null\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/clinical-summary/patient-query/medications",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"clinical-summary",
+										"patient-query",
+										"medications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Query Allergies",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"Meta\": {\n      \"DataModel\": \"Clinical Summary\",\n      \"EventType\": \"PatientQuery\",\n      \"EventDateTime\": \"2022-08-16T14:21:20.733Z\",\n      \"Test\": false,\n      \"Source\": \n         {\n            \"ID\": \"5af5ebe8-4224-41d5-be7a-f3df671b57e5\",\n            \"Name\": \"CustomerID\"\n         },\n      \"FacilityCode\": null\n   },\n   \"Patient\": {\n      \"Identifiers\": [\n         {\n            \"ID\": \"enh2Q1c0oNRtWzXArnG4tKw3\",\n            \"IDType\": \"EHRID\"\n         }\n      ]\n   },\n   \"Location\": {\n      \"Department\": null\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/clinical-summary/patient-query/allergies",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"clinical-summary",
+										"patient-query",
+										"allergies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Query Procedures",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"Meta\": {\n      \"DataModel\": \"Clinical Summary\",\n      \"EventType\": \"PatientQuery\",\n      \"EventDateTime\": \"2022-08-16T14:21:20.733Z\",\n      \"Test\": false,\n      \"Source\": \n         {\n            \"ID\": \"5af5ebe8-4224-41d5-be7a-f3df671b57e5\",\n            \"Name\": \"CustomerID\"\n         },\n      \"FacilityCode\": null\n   },\n   \"Patient\": {\n      \"Identifiers\": [\n         {\n            \"ID\": \"enh2Q1c0oNRtWzXArnG4tKw3\",\n            \"IDType\": \"EHRID\"\n         }\n      ]\n   },\n   \"Location\": {\n      \"Department\": null\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/clinical-summary/patient-query/procedure",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"clinical-summary",
+										"patient-query",
+										"procedure"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Provider Query",
+			"item": [
+				{
+					"name": "Provider Demographics",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"Meta\": {\n      \"DataModel\": \"Provider\",\n      \"EventType\": \"ProviderQuery\",\n      \"EventDateTime\": \"2022-08-16T14:21:20.733Z\",\n      \"Test\": true,\n      \"Source\": \n         {\n            \"ID\": \"5af5ebe8-4224-41d5-be7a-f3df671b57e5\",\n            \"Name\": \"CustomerID\"\n         },\n      \"FacilityCode\": null\n   },\n   \"Provider\": {\n      \"Identifiers\": [\n         {\n            \"ID\": \"e8q8nmCu5ehjRF8JYikiOmA3\",\n            \"IDType\": \"EHRID\"\n         }\n      ]\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/provider/provider-query/demographics",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"provider",
+								"provider-query",
+								"demographics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

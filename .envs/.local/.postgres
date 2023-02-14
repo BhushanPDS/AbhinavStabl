@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=ehrbridgedbstabl
+POSTGRES_USER=NMQRgWXRiZnKWLVLrAYtjdsalkNsdiftW23243STABL
+POSTGRES_PASSWORD=tdsdpFjPFcjB3RpDUsocUCVULOEOzkQS2ocWQjhg2397hz2Ql5ckFkUpGzDi322349STABL

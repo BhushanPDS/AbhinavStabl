@@ -1,0 +1,78 @@
+version: "3"
+
+volumes:
+  ehr_bridge_local_postgres_data: {}
+  ehr_bridge_local_postgres_data_backups: {}
+
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: ehr_bridge_django_local
+    container_name: ehr_bridge_django_local
+    platform: linux/x86_64
+    depends_on:
+      - postgres
+      - redis
+      - mailhog
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - "8000:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    image: ehr_bridge_postgres_local
+    container_name: ehr_bridge_postgres_local
+    volumes:
+      - ehr_bridge_local_postgres_data:/var/lib/postgresql/data:Z
+      - ehr_bridge_local_postgres_data_backups:/backups:z
+    env_file:
+      - ./.envs/.local/.postgres
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.0
+    container_name: ehr_bridge_mailhog_local
+    ports:
+      - "8025:8025"
+
+  redis:
+    image: redis:6
+    container_name: ehr_bridge_redis_local
+
+  celeryworker:
+    <<: *django
+    image: ehr_bridge_celeryworker_local
+    container_name: ehr_bridge_celeryworker_local
+    depends_on:
+      - redis
+      - postgres
+      - mailhog
+    ports: []
+    command: /start-celeryworker
+
+  celerybeat:
+    <<: *django
+    image: ehr_bridge_celerybeat_local
+    container_name: ehr_bridge_celerybeat_local
+    depends_on:
+      - redis
+      - postgres
+      - mailhog
+    ports: []
+    command: /start-celerybeat
+
+  flower:
+    <<: *django
+    image: ehr_bridge_flower_local
+    container_name: ehr_bridge_flower_local
+    ports:
+      - "5555:5555"
+    command: /start-flower
